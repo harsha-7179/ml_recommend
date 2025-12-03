@@ -1,6 +1,9 @@
-flask
+# Web framework
+Flask
+# Production web server
 gunicorn
+# Data handling
 pandas
 numpy
+# Machine Learning components (TF-IDF and Cosine Similarity)
 scikit-learn
-sentence-transformers

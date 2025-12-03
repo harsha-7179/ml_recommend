@@ -1,16 +1,16 @@
 import os
+import pandas as pd
+# Use TfidfVectorizer from scikit-learn (No PyTorch/Sentence-Transformers needed)
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Create folder if missing
 if not os.path.exists("embeddings"):
     os.makedirs("embeddings")
 
-import pandas as pd
-from sentence_transformers import SentenceTransformer
-
 # Load CSV
 df = pd.read_csv("data/students.csv")
 
-# Combine fields (improved structured format)
+# Combine fields (same as before)
 def combine_fields(row):
     return (
         f"Skills: {row['skills']}. "
@@ -23,19 +23,20 @@ def combine_fields(row):
 
 df["text"] = df.apply(combine_fields, axis=1)
 
-# Load embedding model
-model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+# Initialize the TF-IDF Vectorizer
+vectorizer = TfidfVectorizer(max_features=1000)
 
-# Generate embeddings with progress logs
-embeddings = []
-for i, t in enumerate(df["text"]):
-    if i % 500 == 0:
-        print(f"Encoding {i}/{len(df)}...")
-    embeddings.append(model.encode(t).tolist())
+print("Starting TF-IDF transformation...")
+
+# Fit and transform the text data to get the embeddings
+tfidf_matrix = vectorizer.fit_transform(df["text"])
+
+# Convert the sparse matrix to a list of vectors for storage
+embeddings = tfidf_matrix.toarray().tolist()
 
 df["embedding"] = embeddings
 
 # Save PKL
 df.to_pickle("embeddings/student_embeddings.pkl")
 
-print("✅ Local embeddings generated successfully!")
+print("✅ Local embeddings generated successfully using TF-IDF!")
