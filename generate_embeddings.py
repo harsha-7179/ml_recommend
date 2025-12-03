@@ -1,16 +1,19 @@
 import os
 import pandas as pd
-# Use TfidfVectorizer from scikit-learn (No PyTorch/Sentence-Transformers needed)
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Create folder if missing
-if not os.path.exists("embeddings"):
-    os.makedirs("embeddings")
+# Ensure embeddings folder exists
+os.makedirs("embeddings", exist_ok=True)
 
 # Load CSV
-df = pd.read_csv("data/students.csv")
+try:
+    df = pd.read_csv("data/students.csv")
+except FileNotFoundError:
+    print("FATAL ERROR: students.csv not found in the 'data' folder.")
+    exit()
 
-# Combine fields (same as before)
+
+# ---- Combine fields into a single text string ----
 def combine_fields(row):
     return (
         f"Skills: {row['skills']}. "
@@ -23,20 +26,27 @@ def combine_fields(row):
 
 df["text"] = df.apply(combine_fields, axis=1)
 
-# Initialize the TF-IDF Vectorizer
-vectorizer = TfidfVectorizer(max_features=1000)
 
+# ---- TF-IDF Vectorizer ----
 print("Starting TF-IDF transformation...")
 
-# Fit and transform the text data to get the embeddings
+vectorizer = TfidfVectorizer(max_features=2000)
 tfidf_matrix = vectorizer.fit_transform(df["text"])
 
-# Convert the sparse matrix to a list of vectors for storage
-embeddings = tfidf_matrix.toarray().tolist()
+df["embedding"] = list(tfidf_matrix.toarray())
 
-df["embedding"] = embeddings
 
-# Save PKL
-df.to_pickle("embeddings/student_embeddings.pkl")
+# ---- CRITICAL: Save ALL required fields ----
+final_df = df[[
+    "id",
+    "name",
+    "skills",
+    "project_title",
+    "project_description",
+    "passing_year",
+    "embedding"
+]]
 
-print("✅ Local embeddings generated successfully using TF-IDF!")
+final_df.to_pickle("embeddings/student_embeddings.pkl")
+
+print("✅ Embeddings generated & ALL fields saved successfully!")

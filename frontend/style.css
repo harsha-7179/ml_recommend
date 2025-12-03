@@ -42,10 +42,48 @@ button {
     margin-top: 20px;
 }
 
+/* CARD BASE */
 .card {
     background: #222;
     padding: 15px;
     border-radius: 10px;
-    margin-bottom: 10px;
-    border-left: 4px solid #4CAF50;
+    margin-bottom: 20px;
+    border-left: 4px solid transparent;  /* <-- FIXED */
+}
+
+/* BADGE STYLE */
+.badge {
+    float: right;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.green-badge {
+    background-color: #28a745;
+}
+
+.yellow-badge {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.red-badge {
+    background-color: #dc3545;
+}
+
+/* OPTIONAL: Error/info messages */
+.error-message {
+    padding: 15px;
+    background: #550000;
+    border-left: 4px solid #ff3333;
+    border-radius: 8px;
+}
+
+.info-message {
+    padding: 15px;
+    background: #444;
+    border-left: 4px solid #888;
+    border-radius: 8px;
 }
