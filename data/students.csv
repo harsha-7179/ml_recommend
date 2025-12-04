@@ -1,101 +1,14 @@
 id,name,skills,project_title,project_description,passing_year
-1,Harsha Kondepudi,"Python, C++, GCP, ML, Deep Learning, TensorFlow","Market Pulse Predictor (Hybrid LSTM + Sentiment)","Built a hybrid forecasting engine combining LSTM-based time-series modeling with social-media sentiment signals. Implemented custom feature windows for intraday volatility, tuned dropout layers to reduce overfitting, and deployed the model on GCP with Vertex AI pipelines. Achieved a 14% improvement in directional accuracy over traditional ARIMA baselines.",2024
-
-2,Akhilesh Reddy Gadiraju,"Django, Flask, Node.js, Kubernetes, PostgreSQL","SkillMatch Pro – Resume & JD Alignment System","Developed an NLP platform that converts resumes and job descriptions into dense vector embeddings using Sentence-BERT. Built a scoring pipeline that identifies mismatched competencies and suggests alignment edits. Containerized the entire system with Docker and orchestrated it using Kubernetes for multi-tenant deployments.",2025
-
-3,Prabhas Varma Uppalapati,"Python, AWS, GCP, ML, LSTM, TensorFlow, Solidity","Financial Trend Forecaster with Multi-Signal Fusion","Created a multi-signal prediction framework combining price-action features, macro-economic indicators, and market sentiment. Implemented attention-based LSTM layers for improved long-range pattern capture. Deployed the inference model on AWS Lambda for low-latency responses to trading bots.",2027
-
-4,Allu Arjun Gowtham Raju,"HTML, CSS, Django, Node.js, Kubernetes, Docker","ChainTrack – Decentralized Supply Chain Visualizer","Designed a blockchain-enhanced supply chain dashboard where every product transition is logged on a permissioned ledger. Built microservices for vendor registration, shipment status, and document verification. Deployed the system using Kubernetes autoscaling and integrated container vulnerability scanning.",2025
-
-5,Sai Krishna Nani Pavan","Java, JavaScript, React, TensorFlow, Data Science","FoodLens – Recipe Generator from Food Images","Developed a CNN-powered image classifier that identifies ingredients from food photos and suggests recipes dynamically. Integrated ResNet-50 backbone with a custom multi-label classifier. Frontend built in React with real-time UI updates. Achieved strong performance in identifying overlapping ingredients.",2020
-
-6,Rakesh Daggubati Venumadhav,"Python, C++, SQL, AWS, React, Node.js","Pandemic Dashboard – Spatio-Temporal Analytics","Implemented a complete visualization suite showing live pandemic spread using geospatial heatmaps, time-series curves, and population density overlays. Utilized AWS RDS for structured data storage and S3 for ingestion batches. Optimized backend to maintain sub-70ms API latency at scale.",2025
-
-7,Zara Sid Sriram,"Python, JavaScript, Docker, AWS, GCP, Machine Learning","NimbusServe – Serverless API Gateway","Created a fully serverless data-processing pipeline using AWS Lambda triggers, DynamoDB streams, and API Gateway throttling rules. Focused on low-cost orchestration of high-frequency workloads. Added built-in anomaly detection for API abuse patterns using lightweight ML models.",2020
-
-8,Janaviii Charan Bollapalli,"Python, C++, SQL, HTML, CSS, React, Node.js","LiveWrite – Real-Time Code Collaboration Tool","Built a WebSocket-driven collaborative coding editor supporting conflict-free replicated data types (CRDTs). Implemented role-based permissions, file history timelines, and syntax-aware editing. Optimized delta-transfer packets to reduce bandwidth usage during multi-user sessions.",2027
-
-9,Vishal Mahesh Babu","Python, Java, Kubernetes, TensorFlow, Data Science","TerraScan – Deforestation & Land-Use Analysis","Developed an image classification framework for detecting vegetation loss using a combination of CNN feature extraction and NDVI-based thresholding. Automated model deployment on Kubernetes with GPU-enabled nodes. Generated district-wise environmental impact reports.",2023
-
-10,Balakrishna Chiru Nandamuri","Java, JavaScript, CSS, React, Django, Docker","FinCore – Modular Microservices Banking Suite","Designed a distributed banking system with independent modules for customer onboarding, KYC, transaction routing, and fraud-checking. Implemented circuit-breaker patterns to handle service failures. Dockerized all components and added a CI/CD pipeline using GitHub Actions.",2026
-
-11,Akhil Teja Sreeram","SQL, Flask, Node.js, Kubernetes, TensorFlow","CineRec – Personalized Movie Ranker","Built a collaborative filtering model that computes similarity between users using cosine-based preference vectors. Integrated demographic data to improve cold-start performance. Deployed on Kubernetes with horizontal scaling during peak recommendation queries.",2021
-
-12,Rama Shankar Goud Yadav","Django, Flask, Deep Learning, Data Science, PostgreSQL","FitSync – Cross-Platform Fitness & Activity Tracker","Created a cross-device synchronization mechanism for fitness logs across web, Android, and wearable devices. Built deep-learning modules to estimate calorie burn using accelerometer data. Implemented scheduled background tasks for device-state reconciliation.",2024
-
-13,Vijay Chaitanya Kalaga","C++, HTML, CSS, React, AWS, Data Science","HealthDesk – Intelligent Symptom Screening Chatbot","Built a triage assistant that identifies possible conditions by parsing user queries with an NLP pipeline. Integrated probabilistic reasoning rules to reduce false suggestions. Added AWS Lex fallback for ambiguous user input.",2023
-
-14,Pawan Kalyan Penisetty","Python, Java, JavaScript, Docker, AWS, GCP","AlgoShield – Automated Trading Bot with Risk Guard","Developed a rule-based trading engine augmented with ML-based volatility forecasting. Integrated stop-loss triggers, dynamic lot sizing, and position clustering. Deployed using Docker on AWS ECS with CloudWatch monitoring alerts.",2026
-
-15,Beyzanur Ghoshal","SQL, HTML, CSS, React, PostgreSQL, Solidity","ReelStream – Decentralized Content Review System","Built a Web3-powered content validation system where user reviews are stored on-chain for immutability. Designed React dashboards showing reviewer reputation, fraud detection scores, and token-flow analytics. PostgreSQL used for fast off-chain indexing.",2022
-
-
-16,Harshaaaa Rana Daggubati,"Python, Pandas, Keras, Matplotlib, C++","FinSight – Portfolio Risk Analyzer","Built a portfolio risk assessment tool using Monte Carlo simulations and probabilistic modeling. Developed custom Keras networks to estimate tail-risk for volatile assets. Integrated a visualization layer with Matplotlib for VaR/ES dashboards. Designed data pipelines for ingesting daily OHLC datasets.",2024
-
-17,Jhanavi Sree Rama Chandra,"React, Express, MongoDB, Node.js, Jest","QuickBasket – Real-Time Cart & Pricing Engine","Created an e-commerce system with real-time cart recalculation using event-driven architecture. Implemented dynamic discount engines, multi-step checkout validation, and inventory-locking logic. Wrote Jest-based regression suites ensuring sub-second response times.",2026
-
-18,Ganesh Kaala Bhairava,"AWS Lambda, S3, Python, Flask, DynamoDB","MedSync – Unstructured Health Records Pipeline","Developed a low-latency ingestion pipeline for doctor notes, prescriptions, and lab reports. Used AWS Textract for OCR extraction, DynamoDB streams for state tracking, and Lambda layers for preprocessing. Designed REST APIs with Flask for hospital dashboards.",2025
-
-19,Rama Priya Anirudh,"Java, Spring Boot, Angular, Azure, SQL","Invex – Enterprise Inventory & Order Engine","Built a microservice-driven order allocation system with route optimization. Implemented Azure Service Bus for reliable event handling and SQL stored procedures for batch reconciliations. Added role-based dashboards for warehouse workers and supervisors.",2027
-
-20,Bala Krishna Arjun,"C++, OpenCV, CUDA, YOLO, Python","SafeVision – Industrial Object Detection System","Designed a real-time hazard-detection system using YOLOv5 accelerated with CUDA kernels. Captured live video feeds from industrial cameras and identified zones of danger in under 40ms. Included auto-alert triggers and on-device model optimization for edge units.",2023
-
-21,Prabhas Junior,"PyTorch, HuggingFace, NLTK, Python","LegalAssist – Q&A Language Model for Case Summaries","Fine-tuned transformer architectures on Indian legal datasets to generate summaries and citations. Implemented custom tokenization rules for legal jargon. Deployed the model as a scalable API with fast batch inference using PyTorch Lightning.",2024
-
-22,Nagaraju Luckyy,"HTML, CSS, JavaScript, PHP, MySQL","LegacyPro – Migration & Modernization Toolkit","Built a conversion engine that transforms old PHP-based modules into REST-compliant microservices. Added automated schema analyzers for outdated MySQL tables and auto-generated API documentation. Developed a UI to preview deprecated endpoints.",2022
-
-23,Chiranjeevii Kumar,"Azure, C#, .NET, SQL Server","GameCloud – Serverless Backend for Multiplayer Games","Designed scalable match-making algorithms and a resilient session-management layer. Used Azure Functions for event-driven gameplay triggers and SQL Server for persistent player stats. Added latency-aware routing for geographically distributed players.",2021
-
-24,Vishal Kumar Deverakonda,"Python, R, NumPy, Scipy, SQL","MachinaCare – Predictive Maintenance for Factory Machines","Developed statistical models to predict machine downtime using vibration and temperature signatures. Implemented anomaly detection pipelines and integrated schedule generators for maintenance teams. Visualized machine health scores with interactive charts.",2025
-
-25,Allu Sirish,"Docker, Jenkins, Ansible, Linux, Bash","PipeForce – Automated CI/CD Deployment System","Built a fully automated build-test-release workflow using Jenkins pipelines and Ansible orchestration. Added secure secret management, rollback policies, and auto-health checks. Reduced deployment errors by 62% across multi-container applications.",2024
-
-26,Rehan Ahemed","Python, Scala, Spark, Kafka, Hadoop","StreamForge – Big Data Processing Cluster","Created a distributed stream-processing framework using Spark Structured Streaming. Configured Kafka brokers with custom retention policies. Implemented data-quality checkpoints and HDFS archival pipelines for long-term analytics.",2022
-
-27,Nora Kajal Aggarwal","Keras, TensorFlow, Python, C++, GPU","PathNav – Autonomous Robot Navigation System","Trained a CNN-LSTM hybrid model to guide indoor robots through obstacle-rich environments. Used depth sensors and GPU-accelerated inference for real-time decision-making. Added trajectory smoothing and safety thresholds for collision avoidance.",2026
-
-28,Sam Sandeep Kishan","JavaScript, TypeScript, React Native, SQL","MoneyMate – Mobile Expense & Budget Manager","Built a cross-platform budgeting app with offline sync, monthly analytics, and personalized recommendations. Implemented encrypted local storage for sensitive financial records. Added gesture-driven UI and push alerts for spending anomalies.",2024
-
-29,Anirudh Sai Teja","GCP AI Platform, Python, Sklearn","MedSegPro – Medical Image Segmentation with U-Net","Developed a segmentation pipeline for CT/MRI regions using U-Net and conditional augmentation. Integrated GCP AI Platform for distributed training. Implemented pixel-wise accuracy checks and post-processing morphological filters.",2025
-
-30,Max Ram Charan","NLP, Transformers, Python, Java","PolySense – Multilingual Sentiment Classification API","Created a multilingual sentiment classification system covering English, Hindi, Telugu, and Tamil. Fine-tuned transformer models with custom regional slang dictionaries. Built a high-throughput Java API gateway with batch-request optimization.",2023
-
-31,Ava Shreya Ghoshal,"Solidity, Ethereum, Web3.js, Rust","VoteChain – Blockchain Voting & Transparency System","Built a decentralized voting platform using Solidity smart contracts with tamper-proof ballot storage. Implemented a Rust-based validator service for optimizing on-chain confirmations. Added voter anonymization, multi-signature validation, and fraud-prevention analytics on off-chain nodes.",2026
-
-32,Caleb NTR Reddy,"Docker, Kubernetes, Helm, Terraform","CloudMesh – Multi-Cloud Orchestration Framework","Developed a unified control plane to manage deployments across AWS, Azure, and GCP using Terraform modules and Helm charts. Added autoscaling rules, disaster-recovery strategies, and centralized secrets storage. Integrated policy-as-code checks for compliance.",2027
-
-33,Lily Anup Rubens,"Python, Jupyter, Seaborn, Pandas","EnerTrack – Time-Series Energy Usage Analyzer","Created a forecasting tool analyzing household energy consumption patterns with seasonal decomposition and ARIMA variants. Implemented anomaly detection for power spikes. Visualized high-resolution usage charts and conducted feature-impact studies.",2024
-
-34,Noah Nag Ashwin,"C++, Arduino, RTOS, Embedded Linux","HomeHub – IoT Gateway for Smart Devices","Designed an embedded gateway supporting sensor multiplexing, RTOS-based scheduling, and MQTT message routing. Added device pairing, over-the-air updates, and secure firmware flashing. Built an admin dashboard showing uptime metrics and device-health stats.",2025
-
-35,Owen DSP Balu,"AWS, GCP, Azure, Python, Security","CloudGuard – Security Posture Monitoring System","Built a unified dashboard detecting misconfigurations across cloud providers using CSPM techniques. Implemented IAM drift detection, threat scoring, and policy violation alerts. Automated report generation for SOC teams using Python-based rule engines.",2023
-
-36,Mia Rahul Sipligunj,"Python, Selenium, BeautifulSoup, ETL","WebMint – Automated Scraping & ETL Workflow","Developed scalable crawlers scraping product listings and pricing trends from 40+ websites. Designed ETL flows with deduplication, schema validation, and enrichment. Used Selenium for JavaScript-heavy pages and integrated Airflow for scheduling.",2022
-
-37,Leo Sai Dharam Tej,"React, Next.js, GraphQL, PostgreSQL","BlogAura – High-Performance SSR Publishing Engine","Built a server-side rendered blogging platform with category caching, instant search, and GraphQL APIs. Implemented role-based content workflows, SEO scoring metrics, and CDN-backed static asset optimization.",2025
-
-38,Chai Pawan,"Java, Spring, MySQL, Kafka","StreamBox – Distributed Messaging & Event Bus","Built a distributed messaging engine capable of high-throughput event publishing. Implemented dead-letter queues, retention policies, and topic-sharding for load balancing. Added admin UIs showing consumer lag and broker health.",2027
-
-39,Daniel DSP Rockstar,"TensorFlow, PyTorch, Go, Docker","VisionFusion – Cross-Modal Retrieval Engine","Developed a cross-modal search system connecting image embeddings with text-based descriptions. Built a dual-encoder architecture and deployed inference services in Go for speed. Added vector similarity search using Faiss.",2024
-
-40,Sarah KTR","C++, Linux, Kernel, Networking","NetPulse – High-Speed Packet Processing Tool","Implemented a DPDK-based packet analyzer for high-performance network monitoring. Added zero-copy buffers, flow aggregation, and congestion-detection logic. Tuned kernel parameters for optimized throughput on 40GbE links.",2026
-
-41,Unique Sruthi Haasan,"R, GIS, QGIS, PostGIS, JavaScript","GeoVista – Interactive Topographic Data Explorer","Created a geospatial data viewer that processes satellite imagery, terrain models, and boundary overlays. Wrote custom R scripts for spatial joins and PostGIS queries. Built an interactive front-end map with Leaflet layers and clustering.",2023
-
-42,Unique Devi Sri Prasad,"Assembly, VHDL, FPGA, C","MiniRISC – Custom CPU Architecture on FPGA","Designed and simulated a minimal RISC-style CPU with pipelining, ALU modules, and hazard detection. Implemented instruction memory and control logic in VHDL. Benchmarked performance against soft-core processors.",2025
-
-43,Unique Ram Miriyala,"Rust, WebAssembly, Go, Kubernetes","CacheBlaze – Distributed WASM Cache System","Developed an ultra-fast caching engine using Rust compiled to WebAssembly for sandboxed execution. Implemented a Go-based control plane with Kubernetes-native scaling. Added custom eviction strategies and request tracing.",2024
-
-44,Unique Mangli,"Swift, Kotlin, Firebase, iOS/Android","ARStylo – Augmented Reality Retail App","Created a mobile AR experience for trying products virtually. Implemented SLAM-based tracking, 3D model rendering, and personalized product feeds. Synced user preferences and purchase history through Firebase Realtime DB.",2026
-
-45,Unique Mallikarjun,"Prolog, LISP, Haskell, Formal Verification","LogicProver – First-Order Theorem Proving System","Developed a theorem prover using unification algorithms and resolution refutation. Focused on correctness proofs, quantifier elimination, and rule-driven inference. Built a terminal-based debugging tool visualizing inference trees.",2027
-
-46,Victor Prudhvi Chandra,"Python, Scikit-learn, Feature Engineering","TeleSense – Telecom Churn Predictor","Created customer churn classifiers using ensemble models and advanced feature engineering (contract type, tenure signals, billing irregularities). Added SHAP interpretability dashboards and incremental learning for monthly model updates.",2023
-
-47,Wendy Sunitha Upendra,"C#, ASP.NET, Azure DevOps, EF Core","LedgerOne – Cloud-Native Banking Ledger API","Developed a robust transaction-safe ledger with double-entry accounting and ACID-compliant operations. Integrated Azure DevOps CI/CD, SQL migrations, and API throttling. Added fraud-pattern alerts using rule-based scoring.",2025
-
-48,Xavier Harika Sai,"Terraform, Packer, SaltStack, VMware","InfraCraft – Hybrid Cloud IaC Automation","Built reusable Terraform modules for multi-environment provisioning. Automated VM image creation with Packer and configuration orchestration with SaltStack. Added cost-optimization analyzers for hybrid workload distribution.",2024
-
-49,Yara Geetha Madhuri,"R, Python, NLP, Data Visualization","ReviewMiner – Topic Modeling for Customer Feedback","Designed an NLP pipeline performing topic clustering using LDA and BERTopic. Created dashboards showing sentiment polarity, trending issues, and feature requests. Automated weekly summary generation for product teams.",2027
-
-50,Zachary SP Balasubrahmanyam,"Go, Prometheus, Grafana, gRPC","TraceScope – Distributed Monitoring & Tracing System","Developed a high-throughput tracing service using gRPC streaming and Go routines. Integrated Prometheus exporters, Grafana drill-down dashboards, and sampling strategies for large clusters. Designed fallback mechanisms during node outages.",2026
+1,Harsha,"java, python, html, css, javascript, c++","Hand recognition by AI","A hand sign recognition system that converts signs to language using ML techniques.",2027
+2,Ramesh,"cad, simulation, analysis, cnc programming, robotics","Smart Automated Cooling System","Design and optimize an automatic cooling enclosure for machines using CFD airflow simulation.",2024
+3,Ananya Rao,"power systems, matlab, simulink, transformers","Grid Fault Detection System","A simulation-based project that detects line faults using pattern recognition and protects the grid in real time.",2024
+4,Suresh,"cad, automation, simulation, catia360, dof analysis, motion analysis","Automated Robotic Arm","A robotic arm for material sorting using mechanical linkages and automation.",2025
+5,Jeffrey Ramos,"Django, Flask, Deep Learning, HTML, TensorFlow, SQL","Face Recognition System","AI-powered face recognition system for real-world use.",2024
+6,Akhilesh,"dsa, java, html, css, cloud","Real Time Student Recommendation System","A system that recommends best-matching students using embeddings and cosine similarity.",2028
+7,Dr. Katherine Murray,"Machine Learning, Node.js, HTML, Python, CSS","Prediction Model","A machine learning model for predictive analytics.",2025
+8,Ramesh,"simulation, analysis, automation","Solar-Powered Water Pump","Optimized pump impeller design for maximum discharge with CFD.",2026
+9,Balakrishna,"Flask, HTML, C++","Prediction Model","A machine learning model for real-world prediction tasks.",2021
+10,Vishal Penissette,"Java, Flask, Docker","AI-Powered Resume Screener","Reads resumes, extracts skills, compares with job description, and generates ATS score.",2023
+11,Jhanavi,"circuit theory, network analysis, arduino, esp32, python","Smart Solar Power Monitoring & Optimization System","This system monitors and optimizes a solar panel in real time with MPPT.",2025
+12,Krishna Teja,"embedded c, pcb design, arduino, sensors","Smart Energy Meter with GSM","Design of an automated digital energy meter that sends readings via GSM and reduces human error.",2026
+13,Priyanka Sharma,"power electronics, dc converters, mosfet design","Bidirectional DC-DC Converter","Design and simulation of a high-efficiency bidirectional converter used in EV battery charging.",2025

@@ -1,5 +1,4 @@
-embeddings/
-*.pkl
+
 __pycache__/
 venv/
 .env
